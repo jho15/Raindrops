@@ -1,4 +1,4 @@
-Raindrop[] drops = new Raindrop[200];
+Raindrop[] drops = new Raindrop[12];
 Catcher catcher;
 
 
