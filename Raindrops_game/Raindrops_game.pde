@@ -12,7 +12,7 @@ size(500,500);
 
 
   void draw() {
-     background(0,55,100);
+     background(0,85,120);
      for (int i =0; i<drops.length; i++) {
       drops[i].display();
       drops[i].fall();

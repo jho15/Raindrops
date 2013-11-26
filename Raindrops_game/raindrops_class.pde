@@ -30,6 +30,13 @@ class Raindrop {
         loc.y = 0;
       }
     }
-  }
+// void checkCatcher(catcher cat){
+//    if(dist(loc.x,loc.y),cat.loc.x, cat.loc.y){  
+//      
+//    }
 
+}
+
+ 
+      
 
