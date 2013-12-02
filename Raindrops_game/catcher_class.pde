@@ -15,6 +15,15 @@ class Catcher {
     loc.set(mouseX, height-d);
   }
   
+  boolean catchDrop(Raindrop drop){
+    if(loc.dist(drop.loc)< d/2 +drop.d/2){
+      drop.colorChange();
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
    
 }
 

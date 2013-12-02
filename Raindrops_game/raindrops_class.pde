@@ -1,17 +1,14 @@
 class Raindrop {
-  int d;
   PVector loc, vel, acc;
+  int d;
   color c;
 
-
   Raindrop() {
-    //    d=50;
-    loc = new PVector (random(width), random(-height/2, -d));
-    vel = new PVector (0, random(1, 4));
+    d=10;
+    loc = new PVector (random(0, width), 0);
+    vel = new PVector (0, random(0, 2));
     acc = new PVector(0, .001);
-    d = 10;
-    //    int r=int(random(1,5));
-    //    drop = loadImage("rain.png");
+   
   }
 
 
@@ -32,4 +29,12 @@ class Raindrop {
     c=color(0, random(200, 255), random(90, 152));
   }
 }
+
+//ellipse(loc.x, loc.y, d, d);
+
+
+// void checkCatcher(catcher cat){
+//    if(dist(loc.x,loc.y),cat.loc.x, cat.loc.y){  
+//      
+//    }
 
