@@ -1,42 +1,35 @@
 class Raindrop {
   int d;
   PVector loc, vel, acc;
-//  PImage drop;
-  
+  color c;
+
+
   Raindrop() {
-//    d=50;
-    loc = new PVector (random(0, width), 0);
-    vel = new PVector (0, random(0, 2));
+    //    d=50;
+    loc = new PVector (random(width), random(-height/2, -d));
+    vel = new PVector (0, random(1, 4));
     acc = new PVector(0, .001);
     d = 10;
-//    int r=int(random(1,5));
-//    drop = loadImage("rain.png");
+    //    int r=int(random(1,5));
+    //    drop = loadImage("rain.png");
   }
 
 
-    void display() { 
-      ellipse(loc.x, loc.y, d,d);
-    }
+  void display() { 
+    fill(c);
+    ellipse(loc.x, loc.y, d, d);
+  }
 
-    void fall() {
-     loc.add(vel); 
-//     vel.add(acc);
-      
-      if (loc.x > width) {
-        loc.x = 0;
-      }
-
-      if (loc.y > height) {
-        loc.y = 0;
-      }
-    }
-// void checkCatcher(catcher cat){
-//    if(dist(loc.x,loc.y),cat.loc.x, cat.loc.y){  
-//      
-//    }
-
+  void fall() {
+    loc.add(vel); 
+    vel.add(acc);
+  }
+  void reset() {
+    loc.set(random(width), 0);
+    vel.set(0, random(1, 4));
+  }
+  void colorChange() {
+    c=color(0, random(200, 255), random(90, 152));
+  }
 }
-
- 
-      
 

@@ -14,5 +14,7 @@ class Catcher {
   void update() {
     loc.set(mouseX, height-d);
   }
+  
+   
 }
 
