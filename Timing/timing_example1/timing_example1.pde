@@ -22,18 +22,18 @@ int currentTime=0;
 int timeChange;
 
 void setup() {
-  size(500,500);
+  size(500, 500);
 }
 
 void draw() {
-    ellipse(mouseX,mouseY, 20,20);
+  ellipse(mouseX, mouseY, 20, 20);
   currentTime = millis();
   timeChange = currentTime-oldTime;
-//  background(0);
-  if (timeChange >=2000){
-  fill(0,250,random(255));
 
-  oldTime = currentTime;
+  if (timeChange >=2000) {
+    fill(0, 250, random(255));
+
+    oldTime = currentTime;
   }
 }
 
