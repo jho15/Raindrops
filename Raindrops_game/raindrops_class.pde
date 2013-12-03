@@ -26,15 +26,8 @@ class Raindrop {
     vel.set(0, random(1, 4));
   }
   void colorChange() {
-    c=color(0, random(200, 255), random(90, 152));
+    c=color(0, 55, random(100,255));
   }
 }
 
-//ellipse(loc.x, loc.y, d, d);
-
-
-// void checkCatcher(catcher cat){
-//    if(dist(loc.x,loc.y),cat.loc.x, cat.loc.y){  
-//      
-//    }
 
