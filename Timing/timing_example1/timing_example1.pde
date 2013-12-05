@@ -1,3 +1,5 @@
+
+//this is the timer
 //color c = color(0);
 //int waitTime = 2000;
 //
