@@ -12,6 +12,7 @@ class Catcher {
   void display() {
     fill(255);
     //    ellipse(loc.x, loc.y, d, d);
+    imageMode(CENTER);
     image(bucket, loc.x, loc.y, bucket.width/3, bucket.height/3);
   }
 
