@@ -7,6 +7,7 @@ int score;
 PImage city;
 boolean gameOver = false;
 int rx, ry, w, h;
+int lives;
 
 
 
@@ -21,6 +22,7 @@ void setup() {
     dr[i] = new Raindrop();
   }
   catcher=new Catcher();
+  lives =5;
 }
 
 void draw() {
@@ -30,7 +32,10 @@ void draw() {
   for (int i =0; i<index; i++) {
     dr[i].display();
     dr[i].fall();
-    if (dr[i].loc.y>height+dr[i].d) {
+    if (dr[i].loc.y>height && dr[i].loc.y<height+dr[i].d/14 ) {
+      lives--;
+    }
+    if(lives==0){
       gameOver = true;
     }
     if (catcher.catchDrop(dr[i]) == true) {
@@ -67,6 +72,7 @@ void draw() {
     fill(0);
     text("START OVER", 60, 105);
   }
+  println(lives);
 }
 
 //this is the restart button
