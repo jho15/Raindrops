@@ -11,7 +11,6 @@ class Catcher {
 
   void display() {
     fill(255);
-    //    ellipse(loc.x, loc.y, d, d);
     imageMode(CENTER);
     image(bucket, loc.x, loc.y, bucket.width/3, bucket.height/3);
   }
@@ -22,10 +21,10 @@ class Catcher {
 
 
 
+ //this checks to see if the catcher has actually caught the drop. if it has, then the score increases and the drop is removed from the screen. if it is not true, then the drop is reset
   boolean catchDrop(Raindrop drop) {
     if (loc.dist(drop.loc)< d/2 +drop.d/2) {
-      drop.colorChange();
-      return true;
+           return true;
     }
     else {
       return false;

@@ -34,6 +34,7 @@ class Raindrop {
     c=color(0, 55, random(100,255));
   }
   
+  //moves the raindrop off the screen
     void goAway() {
     loc.set(height*2,0);
     vel.set(0,0);
