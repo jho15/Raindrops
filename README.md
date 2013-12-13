@@ -6,5 +6,6 @@ Steps of Making the Game
 =========================
 * Create the raindrop - DONE
 * Create a catcher - DONE
-* If a raindrop intersects with the catcher, the raindrop is caught. 
-* If the raindrop is caught, it will disappear from the screen.
+* If a raindrop intersects with the catcher, the raindrop is caught - DONE
+* If the raindrop is caught, it will disappear from the screen - DONE
+* Create a scorekeeper that tracks of how many raindrops are caught - DONE
