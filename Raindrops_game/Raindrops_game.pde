@@ -33,7 +33,7 @@ void draw() {
     //this is the start screen
     if (start==true) {
       background(0);
-      fill(10, 255, 0);
+      fill(10, 250, 95);
       textSize(100);
       textAlign(CENTER);
       text("Click to Start", city.width/2, city.height/2);
