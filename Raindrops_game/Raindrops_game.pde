@@ -77,14 +77,14 @@ void draw() {
     if (gameOver == true) {
       background(0);
       textSize(100);
-      fill(random(100, 255), 0, 0);
-      text("GAME OVER", 300, 250);
+      fill(random(250, 255), 0, 0);  
+      text("GAME OVER", 475, 300);
       //restart button
       fill(0, 255, 0);
       rect(rx, ry, w, h);
       textSize(20);
       fill(0);
-      text("START OVER", 150, 105);
+      text("START OVER", 135, 105);
     }
     //shows how many lives are left
     println(lives);
