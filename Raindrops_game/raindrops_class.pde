@@ -1,5 +1,3 @@
-
-
 class Raindrop {
   PVector loc, vel, acc;
   int d;
