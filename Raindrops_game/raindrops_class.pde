@@ -8,7 +8,7 @@ class Raindrop {
 
     loc = new PVector (random(0, width), -d);
     vel = new PVector (0, random(1, 2));
-    acc = new PVector(0, .005);
+    acc = new PVector(0, .0075);
    rain = loadImage("rain.png");
    d= rain.width/4;
    

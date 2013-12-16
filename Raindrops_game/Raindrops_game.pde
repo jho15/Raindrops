@@ -87,11 +87,11 @@ void draw() {
       background(0);
       textSize(100);
       fill(random(250, 255), 0, 0);  
-      text("GAME OVER", 475, 300);
+      text("GAME OVER", 450, 300);
       //restart button
       fill(0, 255, 0);
       rect(rx, ry, w, h);
-      textSize(20);
+      textSize(25);
       fill(0);
       text("START OVER", 135, 105);
     }
