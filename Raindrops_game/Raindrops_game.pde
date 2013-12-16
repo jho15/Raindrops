@@ -9,6 +9,7 @@ boolean gameOver = false;
 int rx, ry, w, h;
 int lives;
 boolean start = true;
+PImage heart;
 
 
 void setup() {
@@ -17,7 +18,8 @@ void setup() {
   w=175;
   h=75;
 
-  city = loadImage("street1.png");
+  city = loadImage("nycrain.png");
+  heart = loadImage("heart.png");
   size(city.width, city.height);
   for (int i = 0; i<dr.length; i++) {
     dr[i] = new Raindrop();
@@ -63,6 +65,10 @@ void draw() {
       textSize(80);
       fill(255, 0, 0);
       text(score, 75, 100);
+      image(heart, city.width-100,80, heart.width/2, heart.height/2);
+      textSize(40);
+      fill(255);
+      text(lives, city.width-100, 100);
 
       //this the interval at which the raindrops fall
       if (millis() - oldTime > threshold) {
