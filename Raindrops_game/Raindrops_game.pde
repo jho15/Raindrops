@@ -99,11 +99,12 @@ void draw() {
     println(lives);
   }
   //this is the restart button
-  if (mousePressed == true && mouseX>rx && mouseX<rx+w && mouseY>ry && mouseY<ry+h) {
+  if (mousePressed == true && mouseX>rx && mouseX<rx+w && mouseY>ry && mouseY<ry+h && gameOver==true) {
     for (int i =0; i<index; i++) {   
       dr[i].reset();
     }
     gameOver = false;
+    start = true;
     score = 0;
     lives = 5;
     index=1;
@@ -111,6 +112,6 @@ void draw() {
 }
 
 void mousePressed() {
-  start= !start;
+  start= false;
 }
 
