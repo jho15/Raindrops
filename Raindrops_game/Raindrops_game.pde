@@ -62,11 +62,14 @@ void draw() {
       catcher.display();
       catcher.update();
 
+      //this displays the score
       textSize(80);
-      fill(255, 0, 0);
+      fill(255);
       text(score, 75, 100);
-      image(heart, city.width-100,80, heart.width/2, heart.height/2);
-      textSize(40);
+      
+      //creates the lives counter
+      image(heart, city.width-100,85, heart.width/3, heart.height/3);
+      textSize(30);
       fill(255);
       text(lives, city.width-100, 100);
 
@@ -103,6 +106,7 @@ void draw() {
     gameOver = false;
     score = 0;
     lives = 5;
+    index=1;
   }
 }
 
