@@ -112,11 +112,13 @@ void draw() {
     lives = 5;
     index=1;
   }
-  //this takes you to a screen once the catcher has caught ___ raindrops
-  if (score==50) {
+  //this takes you to a screen once the catcher has caught 45 raindrops
+  if (score==45) {
     imageMode(CORNER);
     image(win, 0, 0, width, height);
-
+    for (int i =0; i<index; i++) {   
+      dr[i].goAway();
+    }
   }
 }
 
