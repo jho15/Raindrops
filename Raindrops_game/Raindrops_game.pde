@@ -10,6 +10,7 @@ int rx, ry, w, h;
 int lives;
 boolean start = true;
 PImage heart;
+PImage win;
 PImage park;
 
 
@@ -18,6 +19,7 @@ void setup() {
   ry=60;
   w=175;
   h=75;
+  win=loadImage("winner.png");
   park = loadImage("centralpark.png");
   city = loadImage("nycrain.png");
   heart = loadImage("heart.png");
@@ -67,9 +69,9 @@ void draw() {
       textSize(80);
       fill(255);
       text(score, 75, 100);
-      
+
       //creates the lives counter
-      image(heart, city.width-100,85, heart.width/3, heart.height/3);
+      image(heart, city.width-100, 85, heart.width/3, heart.height/3);
       textSize(30);
       fill(255);
       text(lives, city.width-100, 100);
@@ -111,12 +113,10 @@ void draw() {
     index=1;
   }
   //this takes you to a screen once the catcher has caught ___ raindrops
-  if(score==3){
+  if (score==50) {
     imageMode(CORNER);
-    image(park,0,0,width,height);
-    textSize(35);
-    fill(0);
-    text("CONGRATULATIONS YOU WIN", 375,200);
+    image(win, 0, 0, width, height);
+
   }
 }
 
