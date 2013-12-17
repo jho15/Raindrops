@@ -10,6 +10,7 @@ int rx, ry, w, h;
 int lives;
 boolean start = true;
 PImage heart;
+PImage park;
 
 
 void setup() {
@@ -17,7 +18,7 @@ void setup() {
   ry=60;
   w=175;
   h=75;
-
+  park = loadImage("centralpark.png");
   city = loadImage("nycrain.png");
   heart = loadImage("heart.png");
   size(city.width, city.height);
@@ -108,6 +109,14 @@ void draw() {
     score = 0;
     lives = 5;
     index=1;
+  }
+  //this takes you to a screen once the catcher has caught ___ raindrops
+  if(score==3){
+    imageMode(CORNER);
+    image(park,0,0,width,height);
+    textSize(35);
+    fill(0);
+    text("CONGRATULATIONS YOU WIN", 375,200);
   }
 }
 
