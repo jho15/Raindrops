@@ -112,12 +112,27 @@ void draw() {
     lives = 5;
     index=1;
   }
-  //  this takes you to a WINNING screen once the catcher has caught 25 raindrops, and the game is over
-  if (score==25) {
+  //  this takes you to a WINNING screen once the catcher has caught 20 raindrops
+  if (score==20) {
     imageMode(CORNER);
     image(win, 0, 0, width, height);
     for (int i =0; i<index; i++) {   
       dr[i].goAway();
+    }
+    //Play Again button
+    fill(0, 255, 0);
+    rect(rx-25, ry-40, w, h);
+    textSize(25);
+    fill(0);
+    text("Play Again", 115, 65);
+    if (mousePressed == true && mouseX>rx && mouseX<rx+w && mouseY>ry && mouseY<ry+h && gameOver==false) {
+      for (int i =0; i<index; i++) {   
+        dr[i].reset();
+      }
+      start = true;
+      score = 0;
+      lives = 5;
+      index=1;
     }
   }
 }
