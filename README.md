@@ -9,3 +9,7 @@ Steps of Making the Game
 * If a raindrop intersects with the catcher, the raindrop is caught - DONE
 * If the raindrop is caught, it will disappear from the screen - DONE
 * Create a scorekeeper that tracks of how many raindrops are caught - DONE
+* Create a lives counter that displays how many lives are left - DONE
+* Create a Start Screen - DONE
+* Create a Game Over Screen once the amount of lives is 0 - DONE
+* Create a Winning Screen once the score is a certain number - DONE
