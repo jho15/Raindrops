@@ -98,7 +98,7 @@ void draw() {
       fill(0);
       text("START OVER", 135, 105);
     }
-    //shows how many lives are left
+    //shows how many lives are left off-screen
     println(lives);
   }
   //this is the restart button
@@ -112,8 +112,8 @@ void draw() {
     lives = 5;
     index=1;
   }
-  //this takes you to a screen once the catcher has caught 45 raindrops
-  if (score==45) {
+  //  this takes you to a WINNING screen once the catcher has caught 25 raindrops, and the game is over
+  if (score==25) {
     imageMode(CORNER);
     image(win, 0, 0, width, height);
     for (int i =0; i<index; i++) {   
