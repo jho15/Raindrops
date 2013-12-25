@@ -119,12 +119,13 @@ void draw() {
     for (int i =0; i<index; i++) {   
       dr[i].goAway();
     }
-    //Play Again button
+    //this is the Play Again button
     fill(0, 255, 0);
     rect(rx-25, ry-40, w, h);
     textSize(25);
     fill(0);
     text("Play Again", 115, 65);
+    //if the play again button is pressed, the game starts over again
     if (mousePressed == true && mouseX>rx && mouseX<rx+w && mouseY>ry && mouseY<ry+h && gameOver==false) {
       for (int i =0; i<index; i++) {   
         dr[i].reset();
