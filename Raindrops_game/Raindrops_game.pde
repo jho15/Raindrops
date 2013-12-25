@@ -11,7 +11,7 @@ int lives;
 boolean start = true;
 PImage heart;
 PImage win;
-PImage park;
+
 
 
 void setup() {
@@ -20,7 +20,6 @@ void setup() {
   w=175;
   h=75;
   win=loadImage("winner.png");
-  park = loadImage("centralpark.png");
   city = loadImage("nycrain.png");
   heart = loadImage("heart.png");
   size(city.width, city.height);
