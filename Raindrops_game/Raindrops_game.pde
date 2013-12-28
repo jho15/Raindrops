@@ -75,7 +75,7 @@ void draw() {
       fill(255);
       text(lives, city.width-100, 100);
 
-      //this the interval at which the raindrops fall
+      //this is the interval at which the raindrops fall
       if (millis() - oldTime > threshold) {
         if (index<dr.length) {
           index++;
@@ -111,7 +111,7 @@ void draw() {
     lives = 5;
     index=1;
   }
-  //  this takes you to a WINNING screen once the catcher has caught 20 raindrops
+  //  this takes you to a WINNING screen once the catcher has caught 20 raindrops; changing the "score == #" would change when the win screen shows
   if (score==20) {
     imageMode(CORNER);
     image(win, 0, 0, width, height);
