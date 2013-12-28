@@ -65,9 +65,9 @@ void draw() {
       catcher.update();
 
       //this displays the score
-      textSize(80);
+      textSize(50);
       fill(255);
-      text(score, 75, 100);
+      text("Score:"+score, 100, 100);
 
       //creates the lives counter
       image(heart, city.width-100, 85, heart.width/3, heart.height/3);
